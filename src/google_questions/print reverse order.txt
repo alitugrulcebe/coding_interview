@@ -1,8 +1,0 @@
-public void PrintInReverseOrder (Node head) 
-{
-if (head != null) 
-{
-PrintInReverseOrder(head.next); 
-Console.WriteLine(head.value); 
-}; 
-} 
