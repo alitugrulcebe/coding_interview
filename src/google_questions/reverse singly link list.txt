@@ -1,0 +1,15 @@
+public Node Reverse(Node head) 
+{
+Node next; 
+Node current; 
+current = head; 
+Node Result = null; 
+while (current != null) 
+{
+next = current.next; 
+current.next = result; 
+result = current; 
+current = next; 
+} 
+return (result); 
+} 

@@ -1,0 +1,74 @@
+struct node* sortedIntersect(struct node* a, struct node* b)
+{
+  struct node dummy;
+  struct node* tail = &dummy;
+  dummy.next = NULL;
+ 
+  /* Once one or the other list runs out -- we're done */
+  while (a != NULL && b != NULL)
+  {
+    if(a->data == b->data)
+    {
+       push((&tail->next), a->data);
+       tail = tail->next;
+       a = a->next;
+       b = b->next;
+    }
+    else if (a->data < b->data)
+    {
+       /* advance the smaller list */
+       a = a->next;
+    }
+    else
+    {
+       b = b->next;
+    }
+  }
+  return(dummy.next);
+}
+//recursive
+struct node *sortedIntersect(struct node *a, struct node *b,
+                                      struct node *result)
+{
+  /* base case */
+  if(a == NULL || b == NULL)
+  {
+    return NULL;
+  } 
+ 
+  /* If both lists are non-empty */
+ 
+  /* advance the smaller list and call recursively */
+  if(a->data < b->data)
+  {
+    return sortedIntersect(a->next, b, result);
+  }
+  else if(a->data > b->data)
+  {
+    return sortedIntersect(a, b->next, result);
+  }
+  else if(a->data == b->data)
+  {
+    /* If same data is found then allocate memory */
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = a->data;
+ 
+    /* If the first node is being added to resultant list */
+    if(result == NULL)
+    {
+      result = temp;
+    }
+ 
+    /* Else change the next of result and move result to next */
+    else
+    {
+      result->next = temp;
+      result = temp;
+    }
+ 
+    /* advance both lists and call recursively */
+    result->next = sortedIntersect(a->next, b->next, result);
+  }
+ 
+  return result;
+}

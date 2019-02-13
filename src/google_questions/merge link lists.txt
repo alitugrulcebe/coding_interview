@@ -1,0 +1,25 @@
+struct node *merge ( struct node *a, struct node *b )
+{
+  struct node c;
+  struct node *it = &c;
+
+  while ( a != NULL && b != NULL ) {
+    if ( a->Age < b->Age ) {
+      it->next = a;
+      a = a->next;
+    }
+    else {
+      it->next = b;
+      b = b->next;
+    }
+
+    it = it->next;
+  }
+
+  if ( a == NULL )
+    it->next = b;
+  else
+    it->next = a;
+
+  return c.next;
+}

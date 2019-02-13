@@ -1,0 +1,6 @@
+int binarySearch(int value) {
+low = 0; 
+high = N; 
+while (low < mid =" (low" low =" mid" high =" mid-1:">= value, //so high can't be < mid if A[mid] == value high = mid; } // high == low, using high or low depends on taste
+ if (low < N) and (A[low] == value) return low // found else return -1 // not found 
+}
