@@ -1,0 +1,10 @@
+void DeleteList(struct node** headRef) {
+struct node* current = *headRef; // deref headRef to get the real
+headstruct node* next;
+while (current != NULL) {
+next = current->next; // note the next pointer
+free(current); // delete the node
+current = next; // advance to the next node
+}
+*headRef = NULL; // Again, deref headRef to affect the real head back// in the caller.
+}

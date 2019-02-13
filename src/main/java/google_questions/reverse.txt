@@ -1,0 +1,15 @@
+reverse()
+{
+	Node * head =m_Head;
+	Node* temp1 = NULL;
+	Node * temp2 =NULL;
+	while(temp1)
+	{	
+		m_Head = head;
+		temp1 = head->next;
+		head->next = temp2;
+		temp2 = temp1;
+		head = temp1;
+	}
+
+}

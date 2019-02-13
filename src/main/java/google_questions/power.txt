@@ -1,0 +1,10 @@
+int pow (int x, int n) {
+    if (n == 0)
+        return 1;
+    if (n == 1)
+        return x;
+    if (n & 0x1) // n odd
+        return pow(x*x, n/2) * x;
+    else // n even
+        return pow(x*x, n/2);
+}

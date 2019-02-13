@@ -1,0 +1,69 @@
+string removeChars( string str, string remove ){
+    char[] s = str.toCharArray();
+    char[] r = remove.toCharArray();
+    bool[] flags = new bool[128]; // assumes ASCII!
+    int    len = s.Length;
+    int    src, dst;
+
+    // Set flags for characters to be removed
+    for( src = 0; src < len; ++src ){
+        flags[r[src]] = true;
+    }
+    src = 0;
+    dst = 0;
+
+    // Now loop through all the characters,
+    // copying only if they aren't flagged
+    while( src < len ){
+        if( !flags[ (int)s[src] ] ){
+            s[dst++] = s[src];
+        }
+        ++src;
+    }
+
+    return new string( s, 0, dst );
+}
+
+
+bool reverseWords( char str[] ){
+    char *buffer;
+    int tokenReadPos, wordReadPos, wordEnd, writePos = 0;
+
+    /* Position of the last character is length - 1 */
+    tokenReadPos = strlen(str) - 1;
+
+    buffer = (char *) malloc(tokenReadPos + 2);
+    if( !buffer )
+        return false; /* reverseWords failed */
+
+    while( tokenReadPos >= 0 ){
+
+        if( str[tokenReadPos] == ' ' ){ /* Non-word characters */
+            /* Write character */
+            buffer[writePos++] = str[tokenReadPos--];
+
+        } else {  /* Word characters */
+            /* Store position of end of word */
+            wordEnd = tokenReadPos;
+
+            /* Scan to next non-word character */
+            while( tokenReadPos >= 0 && str[tokenReadPos] != ' ' )
+                tokenReadPos--;
+
+            /* tokenReadPos went past the start of the word */
+            wordReadPos = tokenReadPos + 1;
+
+           /* Copy the characters of the word */
+           while( wordReadPos <= wordEnd ){
+               buffer[writePos++] = str[wordReadPos++];
+           }
+        }
+    }
+    /* null terminate buffer and copy over str */
+    buffer[writePos] = '\0';
+    strcpy(str, buffer);
+
+    free(buffer);
+
+    return true; /* ReverseWords successful */
+}

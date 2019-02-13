@@ -1,0 +1,7 @@
+while(temp1)
+{
+   temp1 = temp1->next;
+   temp2 = temp1->next->next;
+   if(temp1 == temp2)
+	circular
+}

@@ -1,0 +1,5 @@
+public int getSum(Node head) 
+{
+if (head == null) return 0; 
+else return getSum(head.next) + head.value; 
+} 
