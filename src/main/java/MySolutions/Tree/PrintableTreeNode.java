@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class PrintableTreeNode
 {
-    /** Node that can be printed */
+    /** TreeNode that can be printed */
     public interface PrintableNode
     {
         /** Get left child */

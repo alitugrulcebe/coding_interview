@@ -17,7 +17,7 @@ import java.util.*;
 public class BST {
 	private Node root;
 	private int size;
-	 //Node current = root;
+	 //TreeNode current = root;
 	public BST(){
 		root = null;
 		size = 0;

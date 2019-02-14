@@ -6,38 +6,38 @@ import java.util.Stack;
 
 public class ReverseLevelOrder {
     /* LEVEL ORDER */
-    void reverseLevelOrder(BSTTreeQuestions.Node node)
+    void reverseLevelOrder(TreeNode treeNode)
     {
-        Stack<BSTTreeQuestions.Node> S = new Stack();
-        Queue<BSTTreeQuestions.Node> Q = new LinkedList();
-        Q.add(node);
+        Stack<TreeNode> S = new Stack();
+        Queue<TreeNode> Q = new LinkedList();
+        Q.add(treeNode);
 
         // Do something like normal level order traversal order.Following
         // are the differences with normal level order traversal
-        // 1) Instead of printing a node, we push the node to stack
+        // 1) Instead of printing a treeNode, we push the treeNode to stack
         // 2) Right subtree is visited before left subtree
         while (Q.isEmpty() == false)
         {
-            /* Dequeue node and make it root */
-            node = Q.peek();
+            /* Dequeue treeNode and make it root */
+            treeNode = Q.peek();
             Q.remove();
-            S.push(node);
+            S.push(treeNode);
 
             /* Enqueue right child */
-            if (node.right != null)
+            if (treeNode.right != null)
                 // NOTE: RIGHT CHILD IS ENQUEUED BEFORE LEFT
-                Q.add(node.right);
+                Q.add(treeNode.right);
 
             /* Enqueue left child */
-            if (node.left != null)
-                Q.add(node.left);
+            if (treeNode.left != null)
+                Q.add(treeNode.left);
         }
 
         // Now pop all items from stack one by one and print them
         while (S.empty() == false)
         {
-            node = S.peek();
-            System.out.print(node.val + " ");
+            treeNode = S.peek();
+            System.out.print(treeNode.val + " ");
             S.pop();
         }
     }

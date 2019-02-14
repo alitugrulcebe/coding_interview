@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckTriplets {
-    public void getNodeValuesInOrder(BSTTreeQuestions.Node root, List<Integer> list) {
+    public void getNodeValuesInOrder(TreeNode root, List<Integer> list) {
         if(root== null) {
             return;
         } else {
@@ -14,7 +14,7 @@ public class CheckTriplets {
         }
     }
 
-    public boolean checkTriplets(BSTTreeQuestions.Node root, int sum){
+    public boolean checkTriplets(TreeNode root, int sum){
         ArrayList<Integer> list = new ArrayList<>();
         getNodeValuesInOrder(root,list);
 

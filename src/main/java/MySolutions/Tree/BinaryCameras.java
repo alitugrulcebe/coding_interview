@@ -22,14 +22,14 @@ public class BinaryCameras {
     private static final int MONITOR_BY_OTHER = 1;
     private static final int CAMERA_HERE = 2;
 
-    public int minCameraCover(BSTTreeQuestions.Node root) {
+    public int minCameraCover(TreeNode root) {
         if (getState(root) == NOT_MONITOR) {
             count++;
         }
         return count;
     }
 
-    private int getState(BSTTreeQuestions.Node root) {
+    private int getState(TreeNode root) {
         if (root == null) return MONITOR_BY_OTHER;
         int left = getState(root.left);
         int right = getState(root.right);

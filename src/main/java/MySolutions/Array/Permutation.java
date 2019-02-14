@@ -29,7 +29,7 @@ public class Permutation {
         a.add(2);
         a.add(3);
         ArrayList<Integer> B = new ArrayList<>();
-        applyPermutation(a,B);
+        applyPermutation(B,a);
         B.stream().forEach(System.out::println);
     }
 }

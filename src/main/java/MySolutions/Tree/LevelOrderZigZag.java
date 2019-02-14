@@ -3,48 +3,48 @@ package MySolutions.Tree;
 import java.util.*;
 
 public class LevelOrderZigZag {
-    public static List<List<Integer>> zigzagLevelOrder(BSTTreeQuestions.Node root) {
+    public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if(root == null)
             return result;
 
-        Stack<BSTTreeQuestions.Node> stack = new Stack<>();
-        Stack<BSTTreeQuestions.Node> next = new Stack<>();
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> next = new Stack<>();
         stack.add(root);
         boolean leftToRight = true;
         // check if stack is empty
         while (!stack.isEmpty()) {
             List<Integer> l = new ArrayList<>();
             // pop out of stack
-            BSTTreeQuestions.Node node = stack.pop();
+            TreeNode treeNode = stack.pop();
 
             // print the data in it
-            System.out.println(node.val);
+            System.out.println(treeNode.val);
 
             // store data according to current
             // order.
             if (leftToRight) {
-                if (node.left != null) {
-                    next.push(node.left);
+                if (treeNode.left != null) {
+                    next.push(treeNode.left);
                 }
 
-                if (node.right != null) {
-                    next.push(node.right);
+                if (treeNode.right != null) {
+                    next.push(treeNode.right);
                 }
             }
             else {
-                if (node.right != null) {
-                    next.push(node.right);
+                if (treeNode.right != null) {
+                    next.push(treeNode.right);
                 }
 
-                if (node.left != null) {
-                    next.push(node.left);
+                if (treeNode.left != null) {
+                    next.push(treeNode.left);
                 }
             }
 
             if (stack.isEmpty()) {
                 leftToRight = !leftToRight;
-                Stack<BSTTreeQuestions.Node> temp = stack;
+                Stack<TreeNode> temp = stack;
                 stack = next;
                 next = temp;
             }

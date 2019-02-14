@@ -1,8 +1,8 @@
 package MySolutions.Tree;
 
 public class MaxValueBST {
-    public BSTTreeQuestions.Node findMaxValue(BSTTreeQuestions.Node root){
-        BSTTreeQuestions.Node max;
+    public TreeNode findMaxValue(TreeNode root){
+        TreeNode max;
         if(root==null){
             return null;
         } else {

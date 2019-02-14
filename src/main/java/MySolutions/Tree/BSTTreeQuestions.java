@@ -2,32 +2,9 @@ package MySolutions.Tree;
 
 
 public class BSTTreeQuestions{
-    public static class Node implements PrintableTreeNode.PrintableNode {
-        Node left;
-        Node right;
-        int val;
-        Node() {}
-        Node(int val) { this.val = val;}
+    private TreeNode root;
 
-        @Override
-        public PrintableTreeNode.PrintableNode getLeft() {
-            return left;
-        }
-
-        @Override
-        public PrintableTreeNode.PrintableNode getRight() {
-            return right;
-        }
-
-        @Override
-        public String getText() {
-            return val + "";
-        }
-    }
-
-    private Node root;
-
-    public Node getRoot() {
+    public TreeNode getRoot() {
         return root;
     }
 
@@ -40,19 +17,19 @@ public class BSTTreeQuestions{
     }
 
 
-    private Node createNode(int val) {
-        Node newNode = new Node();
-        newNode.val = val;
-        newNode.left = null;
-        newNode.right = null;
-        return newNode;
+    private TreeNode createNode(int val) {
+        TreeNode newTreeNode = new TreeNode();
+        newTreeNode.val = val;
+        newTreeNode.left = null;
+        newTreeNode.right = null;
+        return newTreeNode;
     }
 
     void insertToBST(int val) {
         root = insert(root, val);
     }
 
-    Node insert(Node root, int val) {
+    TreeNode insert(TreeNode root, int val) {
         if (root == null) {
             return createNode(val);
         } else {
@@ -68,18 +45,18 @@ public class BSTTreeQuestions{
     // SUM of right leaves
     public static BSTTreeQuestions createBinaryTree() {
         BSTTreeQuestions bstree = new BSTTreeQuestions();
-        bstree.root = new Node(2);
-        bstree.root.left = new Node(3);
-        bstree.root.right = new Node(4);
-        bstree.root.left.left = new Node(5);
-        bstree.root.left.right = new Node(6);
-        bstree.root.left.right.left = new Node(7);
-        bstree.root.left.right.right = new Node(8);
-        bstree.root.right.left = new Node(12);
-        bstree.root.right.right = new Node(13);
-        bstree.root.right.left.left = new Node(20);
-        bstree.root.right.left.right = new Node(21);
-        bstree.root.left.right.right = new Node(23);
+        bstree.root = new TreeNode(2);
+        bstree.root.left = new TreeNode(3);
+        bstree.root.right = new TreeNode(4);
+        bstree.root.left.left = new TreeNode(5);
+        bstree.root.left.right = new TreeNode(6);
+        bstree.root.left.right.left = new TreeNode(7);
+        bstree.root.left.right.right = new TreeNode(8);
+        bstree.root.right.left = new TreeNode(12);
+        bstree.root.right.right = new TreeNode(13);
+        bstree.root.right.left.left = new TreeNode(20);
+        bstree.root.right.left.right = new TreeNode(21);
+        bstree.root.left.right.right = new TreeNode(23);
         return bstree;
     }
     public static BSTTreeQuestions createDoubleTree(){
@@ -164,7 +141,7 @@ public class BSTTreeQuestions{
         BSTTreeQuestions tree2 = BSTTreeQuestions.createBSTTree();
         BSTTreeQuestions tree3 = new BSTTreeQuestions();
 
-        Node root = BSTTreeQuestions.createDoubleTree().getRoot();
+        TreeNode root = BSTTreeQuestions.createDoubleTree().getRoot();
         bstree.doubleTree(root);
 
 
@@ -172,15 +149,15 @@ public class BSTTreeQuestions{
         boolean all = false;
         if(all) {
 
-            Node[] nodes = bstree.splitBSTTree(bstree.getRoot(), 35);
+            TreeNode[] nodes = bstree.splitBSTTree(bstree.getRoot(), 35);
 
-            bstree.getRoot().left = new Node(40);
+            bstree.getRoot().left = new TreeNode(40);
             System.out.println(bstree.isBST(bstree.getRoot()));
 
             BSTTreeQuestions sumLeftTree = BSTTreeQuestions.createBSTTree();
             System.out.println(bstree.sumLeft(sumLeftTree.getRoot()));
 
-            //Node mirror = bstree.mirror(bstree.getRoot());
+            //TreeNode mirror = bstree.mirror(bstree.getRoot());
             BSTTreeQuestions cameraTree = BSTTreeQuestions.createCameraTree();
             System.out.println("################# Camera function starts ###########################");
             System.out.println("Min Camera is " + cameraTree.minCameraCover(cameraTree.getRoot()));
@@ -199,7 +176,7 @@ public class BSTTreeQuestions{
             System.out.println("Find max");
             System.out.println(bstree.findMaxValue(bstree.getRoot()));
 
-            Node n = bstree.lca(bstree.getRoot(), 7, 20);
+            TreeNode n = bstree.lca(bstree.getRoot(), 7, 20);
             System.out.println("Odd numbers of tree");
             bstree.printAllOddNumbers(bstree.getRoot());
             System.out.println();

@@ -1,7 +1,7 @@
 package MySolutions.Tree;
 
 public class Traversals {
-    public void postorderTraversal(BSTTreeQuestions.Node root) {
+    public void postorderTraversal(TreeNode root) {
         if(root==null)
             return;
         else {
@@ -11,7 +11,7 @@ public class Traversals {
         }
     }
 
-    public void preorderTraversal(BSTTreeQuestions.Node root) {
+    public void preorderTraversal(TreeNode root) {
         if(root==null)
             return;
         else {
@@ -21,7 +21,7 @@ public class Traversals {
         }
     }
 
-    public void inorderTraversal(BSTTreeQuestions.Node root) {
+    public void inorderTraversal(TreeNode root) {
         if(root==null)
             return;
         else {

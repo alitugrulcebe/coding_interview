@@ -3,17 +3,17 @@ package MySolutions.Tree;
 import java.util.Stack;
 
 public class InorderWithoutRecursive {
-    void inorder(BSTTreeQuestions.Node root)
+    void inorder(TreeNode root)
     {
-        Stack<BSTTreeQuestions.Node> s = new Stack<BSTTreeQuestions.Node>();
-        BSTTreeQuestions.Node curr = root;
+        Stack<TreeNode> s = new Stack<TreeNode>();
+        TreeNode curr = root;
 
         // traverse the tree
         while (curr != null || s.size() > 0)
         {
 
-            /* Reach the left most Node of the
-            curr Node */
+            /* Reach the left most TreeNode of the
+            curr TreeNode */
             while (curr !=  null)
             {
                 /* place pointer to a tree node on

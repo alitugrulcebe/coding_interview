@@ -3,7 +3,7 @@ package MySolutions.Tree;
 import java.util.ArrayList;
 
 public class BSTMinDiffer {
-    public int minDiffInBST(BSTTreeQuestions.Node root) {
+    public int minDiffInBST(TreeNode root) {
         ArrayList<Integer> arr = new ArrayList<>();
 
         minDiffInBSTHelper(root,arr);
@@ -16,7 +16,7 @@ public class BSTMinDiffer {
         return min;
     }
 
-    public void minDiffInBSTHelper(BSTTreeQuestions.Node root, ArrayList<Integer> arr) {
+    public void minDiffInBSTHelper(TreeNode root, ArrayList<Integer> arr) {
         if(root == null) {
             return;
         }

@@ -1,19 +1,19 @@
 package MySolutions.Tree;
 
 public class LowestCommonAnchestorBinary {
-    public static BSTTreeQuestions.Node lca(BSTTreeQuestions.Node node, int n1, int n2)
+    public static TreeNode lca(TreeNode treeNode, int n1, int n2)
     {
-        if (node == null)
+        if (treeNode == null)
             return null;
 
-        if(node.val == n1 || node.val == n2)
-                return node;
+        if(treeNode.val == n1 || treeNode.val == n2)
+                return treeNode;
 
-        BSTTreeQuestions.Node left = lca(node.left,n1,n2);
-        BSTTreeQuestions.Node right = lca(node.right,n1,n2);
+        TreeNode left = lca(treeNode.left,n1,n2);
+        TreeNode right = lca(treeNode.right,n1,n2);
 
         if(left != null && right != null)
-            return node;
+            return treeNode;
 
         if(left == null && right == null)
             return null;
@@ -23,7 +23,7 @@ public class LowestCommonAnchestorBinary {
 
     public static void main(String[] args) {
         BSTTreeQuestions binaryTree = BSTTreeQuestions.createBinaryTree();
-        BSTTreeQuestions.Node node = lca(binaryTree.getRoot(),5,13);
-        System.out.println(node.val);
+        TreeNode treeNode = lca(binaryTree.getRoot(),5,13);
+        System.out.println(treeNode.val);
     }
 }

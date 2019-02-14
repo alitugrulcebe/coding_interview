@@ -4,13 +4,13 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class BSTGetLeafCount {
-    public static int getLeafCountIterative(BSTTreeQuestions.Node root) {
-        Queue<BSTTreeQuestions.Node> queue = new ArrayDeque<>();
+    public static int getLeafCountIterative(TreeNode root) {
+        Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
 
         int leafCount = 0;
         while (!queue.isEmpty()) {
-            BSTTreeQuestions.Node tmp = ((ArrayDeque<BSTTreeQuestions.Node>) queue).pop();
+            TreeNode tmp = ((ArrayDeque<TreeNode>) queue).pop();
 
             if(tmp.left != null)
                 queue.add(tmp.left);
@@ -26,7 +26,7 @@ public class BSTGetLeafCount {
         return leafCount;
     }
 
-    public static int getLeafCount(BSTTreeQuestions.Node root) {
+    public static int getLeafCount(TreeNode root) {
         if(root == null)
             return 0;
         int countLeaf = 0;
@@ -41,7 +41,7 @@ public class BSTGetLeafCount {
     }
 
 
-    public static int gethalfCount(BSTTreeQuestions.Node root)
+    public static int gethalfCount(TreeNode root)
     {
         if (root == null)
             return 0;

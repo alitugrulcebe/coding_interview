@@ -2,7 +2,7 @@ package MySolutions.Tree;
 
 public class BSTSymmetric {
 
-    public static boolean isSymmetricHelper(BSTTreeQuestions.Node left, BSTTreeQuestions.Node right) {
+    public static boolean isSymmetricHelper(TreeNode left, TreeNode right) {
         if(left == null && right == null)
             return true;
 
@@ -14,20 +14,20 @@ public class BSTSymmetric {
                 isSymmetricHelper(left.right,right.left);
     }
 
-    public static boolean isSymmetric(BSTTreeQuestions.Node root) {
+    public static boolean isSymmetric(TreeNode root) {
         return isSymmetricHelper(root.left,root.right);
     }
 
     public static void main(String[] args) {
         BSTTreeQuestions bstree = new BSTTreeQuestions();
-        BSTTreeQuestions.Node root = bstree.getRoot();
-        root = new BSTTreeQuestions.Node(1);
-        root.left = new BSTTreeQuestions.Node(2);
-        root.left.right = new BSTTreeQuestions.Node(4);
-        root.right = new BSTTreeQuestions.Node(2);
-        root.right.left = new BSTTreeQuestions.Node(4);
-        root.left.left = new BSTTreeQuestions.Node(3);
-        root.right.right = new BSTTreeQuestions.Node(3);
+        TreeNode root = bstree.getRoot();
+        root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.left.right = new TreeNode(4);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(4);
+        root.left.left = new TreeNode(3);
+        root.right.right = new TreeNode(3);
 
         System.out.println(isSymmetric(root));
     }

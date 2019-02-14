@@ -1,7 +1,7 @@
 package MySolutions.Tree;
 
 public class BSTHeight {
-    public static int getHeight(BSTTreeQuestions.Node root) {
+    public static int getHeight(TreeNode root) {
         if(root==null){
             return -1;
         }

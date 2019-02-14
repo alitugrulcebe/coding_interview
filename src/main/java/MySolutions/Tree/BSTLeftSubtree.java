@@ -2,7 +2,7 @@ package MySolutions.Tree;
 
 public class BSTLeftSubtree {
     // SUM of left leaves
-    public static int sumLeft(BSTTreeQuestions.Node root) {
+    public static int sumLeft(TreeNode root) {
         if(root == null ) {
             return 0;
         } else if(root.left != null && root.left.left == null && root.left.right ==null) {

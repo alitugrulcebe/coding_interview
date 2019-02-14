@@ -15,7 +15,7 @@ public class BST {
 	 * @param args
 	 */
 	Node root = null;
-	//Node curr = root;
+	//TreeNode curr = root;
 	
 	boolean isEmpty(){
 		return root==null ? true : false;

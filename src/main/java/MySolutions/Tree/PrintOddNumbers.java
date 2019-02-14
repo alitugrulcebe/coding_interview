@@ -2,7 +2,7 @@ package MySolutions.Tree;
 
 public class PrintOddNumbers {
 
-    public void printAllOddNumbers(BSTTreeQuestions.Node root) {
+    public void printAllOddNumbers(TreeNode root) {
         if(root == null)
             return;
 

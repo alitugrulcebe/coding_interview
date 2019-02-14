@@ -1,7 +1,7 @@
 package MySolutions.Tree;
 
 public class ValidateBST {
-    public boolean validateBST(BSTTreeQuestions.Node root) {
+    public boolean validateBST(TreeNode root) {
         if(root==null) {
             return true;
         }

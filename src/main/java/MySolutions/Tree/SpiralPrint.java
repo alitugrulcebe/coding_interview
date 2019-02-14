@@ -3,7 +3,7 @@ package MySolutions.Tree;
 import static MySolutions.Tree.BSTHeight.getHeight;
 
 public class SpiralPrint {
-    public void printTreeSpiralRec(BSTTreeQuestions.Node root) {
+    public void printTreeSpiralRec(TreeNode root) {
         int height = getHeight(root);
         boolean turn = false;
         for(int i=0;i<=height;i++) {
@@ -14,7 +14,7 @@ public class SpiralPrint {
         }
     }
 
-    public void printTreeSpiralHelper(BSTTreeQuestions.Node root, int level, boolean turn){
+    public void printTreeSpiralHelper(TreeNode root, int level, boolean turn){
         if(level == 0 && root!=null) {
             System.out.print(root.val + " ");
             return;

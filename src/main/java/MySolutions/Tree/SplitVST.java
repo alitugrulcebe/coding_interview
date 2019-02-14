@@ -1,8 +1,8 @@
 package MySolutions.Tree;
 
 public class SplitVST {
-    public BSTTreeQuestions.Node[] splitBSTTree(BSTTreeQuestions.Node root, int V) {
-        BSTTreeQuestions.Node[] rootList = new BSTTreeQuestions.Node[] {null,null};
+    public TreeNode[] splitBSTTree(TreeNode root, int V) {
+        TreeNode[] rootList = new TreeNode[] {null,null};
         if(root == null)
             return rootList;
 

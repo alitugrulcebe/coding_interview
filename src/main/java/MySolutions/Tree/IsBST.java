@@ -1,7 +1,7 @@
 package MySolutions.Tree;
 
 public class IsBST {
-    public static boolean isBST(BSTTreeQuestions.Node root) {
+    public static boolean isBST(TreeNode root) {
         if(root == null)
             return true;
 

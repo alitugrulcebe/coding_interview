@@ -1,31 +1,31 @@
 package MySolutions.Tree;
 
 public class DoubleTree {
-    private void doubleTree(BSTTreeQuestions.Node node) {
-        BSTTreeQuestions.Node oldLeft = null;
+    private void doubleTree(TreeNode treeNode) {
+        TreeNode oldLeft = null;
 
-        if (node == null) return;
+        if (treeNode == null) return;
 
         // do the subtrees
-        doubleTree(node.left);
-        doubleTree(node.right);
+        doubleTree(treeNode.left);
+        doubleTree(treeNode.right);
 
         System.out.println("################# BEFORE ################");
         System.out.println("########## OldLeft #############");
         PrintableTreeNode.print(oldLeft);
-        System.out.println("########## Node #############");
-        PrintableTreeNode.print(node);
+        System.out.println("########## TreeNode #############");
+        PrintableTreeNode.print(treeNode);
 
-        // duplicate this node to its left
-        oldLeft = node.left;
-        node.left = new BSTTreeQuestions.Node(node.val);
-        node.left.left = oldLeft;
+        // duplicate this treeNode to its left
+        oldLeft = treeNode.left;
+        treeNode.left = new TreeNode(treeNode.val);
+        treeNode.left.left = oldLeft;
 
         System.out.println("################# AFTER ################");
         System.out.println("########## OldLeft #############");
         PrintableTreeNode.print(oldLeft);
-        System.out.println("########## Node #############");
-        PrintableTreeNode.print(node);
+        System.out.println("########## TreeNode #############");
+        PrintableTreeNode.print(treeNode);
 
     }
 

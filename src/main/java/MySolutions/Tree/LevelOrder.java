@@ -3,14 +3,14 @@ package MySolutions.Tree;
 import static MySolutions.Tree.BSTHeight.getHeight;
 
 public class LevelOrder {
-    public void printLevelRec(BSTTreeQuestions.Node root) {
+    public void printLevelRec(TreeNode root) {
         int height = getHeight(root);
         for(int i=0;i<=height;i++) {
             printLevelOrderHelper(root,i);
         }
     }
 
-    public void printLevelOrderHelper(BSTTreeQuestions.Node root, int level) {
+    public void printLevelOrderHelper(TreeNode root, int level) {
         if(level == 0 && root != null) {
             System.out.print(root.val + " ");
             return;

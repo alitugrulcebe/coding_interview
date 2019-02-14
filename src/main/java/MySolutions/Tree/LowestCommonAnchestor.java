@@ -1,19 +1,19 @@
 package MySolutions.Tree;
 
 public class LowestCommonAnchestor {
-    BSTTreeQuestions.Node lca(BSTTreeQuestions.Node node, int n1, int n2)
+    TreeNode lca(TreeNode treeNode, int n1, int n2)
     {
-        if (node == null)
+        if (treeNode == null)
             return null;
 
         // If both n1 and n2 are smaller than root, then LCA lies in left
-        if (node.val > n1 && node.val > n2)
-            return lca(node.left, n1, n2);
+        if (treeNode.val > n1 && treeNode.val > n2)
+            return lca(treeNode.left, n1, n2);
 
         // If both n1 and n2 are greater than root, then LCA lies in right
-        if (node.val < n1 && node.val < n2)
-            return lca(node.right, n1, n2);
+        if (treeNode.val < n1 && treeNode.val < n2)
+            return lca(treeNode.right, n1, n2);
 
-        return node;
+        return treeNode;
     }
 }
