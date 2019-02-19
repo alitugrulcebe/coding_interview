@@ -7,25 +7,35 @@ import static MySolutions.GeekforGeeks.string.StringQuestions.swap;
 public class PermuteAllString {
 
   private static int counter = 0;
-  public static void permute(String str, int l, int r,ArrayList<String> result)
+  public static ArrayList<String> permute(String str, int l, int r,ArrayList<String> result)
   {
+
+    //System.out.println("FUNC CALL START ########################### " + str);
+    //System.out.println("FUNC CALL Str : " + str + " i : " + l + " R : " + r);
+    //System.out.println("FUNC CALL END ########################### " + str);
     if (l == r) {
-      System.out.println(str);// + "###########################");
+      //System.out.println("BASE CASE ########################### " + str);
       result.add(str);
     }
     else
     {
-      for (int i = l; i <= r; i++)
+      for (int i = l; i < r; i++)
       {
-        //System.out.println("BEFORE swap oncesi Str : " + str + " i : " + i + " Start : " + l + " End : " + r);
+        //System.out.println("BEFORE swap oncesi Str : " + str + " i : " + i + " L : " + l + " R : " + r);
+        System.out.println("BEFORE SWAP (" + l + " , " + i + ")");
         str = swap(str,l,i);
-        //System.out.println("BEFORE swap sonrasi Str : " + str + " i : " + i + " Start : " + l + " End : " + r);
+        System.out.println("BEFORE STR : " + str);
+        //System.out.println("BEFORE swap sonrasi Str : " + str + " i : " + i + " L : " + l + " R : " + r);
+        System.out.println("FUNC CALL Str : " + str + " i : " + i + " L :" + (l+1) + " R : " + r);
         permute(str, l+1, r,result);
-        //System.out.println("AFTER swap oncesi Str : " + str + " i : " + i + " Start : " + l + " End : " + r);
+        //System.out.println("AFTER swap oncesi Str : " + str + " i : " + i + " L : " + l + " R : " + r);
+        System.out.println("AFTER SWAP (" + l + " , " + i + ")");
         str = swap(str,l,i);
-        //System.out.println("AFTER swap sonrasi Str : " + str + " i : " + i + " Start : " + l + " End : " + r);
+        System.out.println("AFTER STR : " + str);
+        //System.out.println("AFTER swap sonrasi Str : " + str + " i : " + i + " L : " + l + " R : " + r);
       }
     }
+    return result;
   }
 
   public static void permute2(String sofar,String rest) {
@@ -57,13 +67,14 @@ public class PermuteAllString {
 
   public static void main(String[] args) {
     ArrayList<String> result = new ArrayList<>();
-    permute("ABCD",0,3,result);
+    System.out.println("PERMUTE 1 ######################");
+    ArrayList<String> abc = permute("ABC", 0, 3, result);
     //System.out.println("Toplam :" + result.size());
-    System.out.println("######################");
-    permute2("","ABCD");
+    System.out.println("PERMUTE 2 ######################");
+    permute2("","ABC");
     System.out.println("Toplam :" + counter);
 
-    System.out.println("######################");
-    permute3("","ABCD");
+    System.out.println("PERMUTE 3 ######################");
+    permute3("","ABC");
   }
 }
