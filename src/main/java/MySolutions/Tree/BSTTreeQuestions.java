@@ -8,6 +8,10 @@ public class BSTTreeQuestions{
         return root;
     }
 
+    public void setRoot(TreeNode root) {
+        this.root = root;
+    }
+
     public static int max(int val,int val2) {
         return val>val2? val:val2;
     }
@@ -98,6 +102,16 @@ public class BSTTreeQuestions{
         bstree.insertToBST(30);
         bstree.insertToBST(20);
         bstree.insertToBST(23);
+        return bstree;
+    }
+
+    public static BSTTreeQuestions createStrTree(){
+        BSTTreeQuestions bstree = new BSTTreeQuestions();
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        bstree.setRoot(root);
         return bstree;
     }
 
