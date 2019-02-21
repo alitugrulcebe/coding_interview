@@ -101,6 +101,15 @@ public class BSTTreeQuestions{
         return bstree;
     }
 
+    public static BSTTreeQuestions createTrimTree(){
+        BSTTreeQuestions bstree = new BSTTreeQuestions();
+        bstree.insertToBST(3);
+        bstree.insertToBST(4);
+        bstree.insertToBST(0);
+        bstree.insertToBST(2);
+        bstree.insertToBST(1);
+        return bstree;
+    }
     public static BSTTreeQuestions createBSTTree(){
         BSTTreeQuestions bstree = new BSTTreeQuestions();
         bstree.insertToBST(30);

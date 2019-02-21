@@ -2,7 +2,7 @@ package MySolutions.Tree;
 
 import java.util.*;
 
-public class LevelOrderZigZag {
+public class LevelOrderZigZagTwoStack {
     public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if(root == null)
@@ -57,7 +57,7 @@ public class LevelOrderZigZag {
 
     public static void main(String[] args) {
         BSTTreeQuestions bstTreeQuestions = BSTTreeQuestions.createBSTTree();
-        System.out.println(zigzagLevelOrder(bstTreeQuestions.getRoot()));
+        System.out.print(zigzagLevelOrder(bstTreeQuestions.getRoot()));
 
     }
 }
