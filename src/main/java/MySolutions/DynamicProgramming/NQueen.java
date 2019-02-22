@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NQueen {
+    //region Description
         /*
       Authorship: Credit for the code in this file goes to the authors of the
       book "Elements of Programming Interviews" by Adnan Aziz, Amit Prakash, and
@@ -22,6 +23,7 @@ public class NQueen {
 
       The video to explain this code is here: [a link will live here someday]
     */
+    //endregion
 
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> result = new ArrayList<>();
@@ -31,14 +33,17 @@ public class NQueen {
 
     private void solveNQueens(int n, int row, List<Integer> colPlacements,
                               List<List<String>> result) {
+        //region NQueen
         /*
           All n queens have been placed in the n rows. We have
           reached the bottom of our recursion. We can now add
           the colPlacements to the result.
         */
+        //endregion
         if (row == n) {
             result.add(generateBoardFromPlacements(colPlacements, n));
         } else {
+            //region NQueen Algo
             /*
               Try ALL columns in the current row that we are making
               a choice on.
@@ -55,44 +60,53 @@ public class NQueen {
               row index 2 has a queen placed in column index 0
               row index 3 has a queen placed in column index 2
             */
+            //endregion
             for (int col = 0; col < n; col++) {
                 colPlacements.add(col); //Record a column placement for this row
+                //region Validation
                 /*
                 If it is a valid placement we recurse to work on
                 the next row (row + 1) in a recursive call
                 */
+                //endregion
                 if (isValid(colPlacements)) {
                     solveNQueens(n, row + 1, colPlacements, result);
                 }
+                //region Remove
                 /*
                 We are done exploring with that placement and now we
                 will remove it from our colPlacements. We will loop
                 back around and try more column placements for this
                 row (if there are any left)
                 */
+                //endregion
                 colPlacements.remove(colPlacements.size() - 1);
             }
 
         }
     }
-
+    //region isValid Func
     /*
       Check if a column placement that we just put in the colPlacements
       list is actually valid to recurse on
     */
+    //endregion
     private static boolean isValid(List<Integer> colPlacements) {
-
-      /*
-        rowWeAreValidatingOn is the row that we just placed a queen on
-        and we need to validate the placement
-      */
+        //region rowWeAreValidatingOn
+          /*
+            rowWeAreValidatingOn is the row that we just placed a queen on
+            and we need to validate the placement
+          */
+          //endregion
         int rowWeAreValidatingOn = colPlacements.size() - 1;
-
+        //region Loop and check our placements
       /*
         Loop and check our placements in every row previous against
         the placement that we just made
       */
+      //endregion
         for (int ithQueenRow = 0; ithQueenRow < rowWeAreValidatingOn; ithQueenRow++) {
+            //region Column Distance
             /*
               Get the absolute difference between:
 
@@ -102,8 +116,10 @@ public class NQueen {
               2.) The column of the queen we just placed
                 colPlacements.get(rowWeAreValidatingOn)
             */
+            //endregion
             int absoluteColumnDistance = Math.abs(colPlacements.get(ithQueenRow) -
                     colPlacements.get(rowWeAreValidatingOn));
+            //region Checking
             /*
               1.) If the absolute difference in columns is 0 then we placed in a column being
               attacked by the i'th queen.
@@ -128,13 +144,14 @@ public class NQueen {
               Absolute Row Distance Between Queen 2 & 3 == 1
               Queen 2 is in row 1, Queen 3 is in row 2. 2 - 1 = 1.
             */
+            //endregion
             if (absoluteColumnDistance == 0 || absoluteColumnDistance == rowWeAreValidatingOn - ithQueenRow) {
                 return false;
             }
         }
         return true;
     }
-
+    //region Board
     /*
      [
        ".Q..",
@@ -144,20 +161,25 @@ public class NQueen {
       ]
       Generate a board from the list of column placements for each of the n rows.
     */
+    //endregion
     private List<String> generateBoardFromPlacements(List<Integer> colPlacements, int n) {
         List<String> board = new ArrayList<>();
         int totalItemsPlaced = colPlacements.size();
+        //region Loop
         /*
             Materialize a row for each queen that we placed
         */
+        //endregion
         for (int row = 0; row < totalItemsPlaced; row++) {
             StringBuilder sb = new StringBuilder();
+            //region Placement
             /*
               Go through all columns in the row and populate the string.
 
               If the column has a queen in it place a 'Q', otherwise place
               a '.'
             */
+            //endregion
             for (int col = 0; col < n; col++) {
                 if (col == colPlacements.get(row)) {
                     sb.append('Q');
@@ -165,9 +187,11 @@ public class NQueen {
                     sb.append('.');
                 }
             }
+            //region Add To Board
             /*
               Add the row to the board
             */
+            //endregion
             board.add(sb.toString());
         }
         return board;

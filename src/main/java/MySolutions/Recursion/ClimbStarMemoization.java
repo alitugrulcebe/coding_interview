@@ -35,9 +35,7 @@ public class ClimbStarMemoization {
         if (memo[i] > 0) {
             return memo[i];
         }
-        System.out.println("Before I is :" + i + " N is :"  + n);
         int oneStep = climb_StairsMemo(i + 1, n, memo);
-        System.out.println("After I is :" + i + " N is :"  + n);
         int twoStep = climb_StairsMemo(i + 2, n, memo);
         memo[i] = oneStep + twoStep;
         return memo[i];

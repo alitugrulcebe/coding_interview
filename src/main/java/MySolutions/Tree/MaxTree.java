@@ -26,6 +26,7 @@ public class MaxTree {
     }
 
     public static void main(String[] args) {
-        TreeNode treeNode = constructMaximumBinaryTree(new int[]{3, 2, 1, 6, 0, 5});
+        TreeNode treeNode = constructMaximumBinaryTree(new int[]{1, 2, 3, 4, 7, 9, 0, 5});
+        PrintableTreeNode.print(treeNode);
     }
 }
