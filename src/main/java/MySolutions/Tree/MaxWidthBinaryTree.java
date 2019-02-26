@@ -17,8 +17,10 @@ public class MaxWidthBinaryTree {
     public static void dfs(TreeNode root, int depth, int pos,String indent) {
         System.out.println(indent + " Node val: " + (root!=null?root.val:"null") + " Pos: " + pos + " Depth " + depth);
         if (root == null) return;
+
         left.computeIfAbsent(depth, x-> pos);
         ans = Math.max(ans, pos - left.get(depth) + 1);
+
         System.out.println(indent + " Max :" + ans);
         dfs(root.left, depth + 1, 2 * pos,indent+indent);
         dfs(root.right, depth + 1, 2 * pos + 1,indent+indent);
@@ -27,6 +29,9 @@ public class MaxWidthBinaryTree {
     public static void main(String[] args) {
         TreeNode t = new TreeNode(1);
         t.left = new TreeNode(2);
+        t.left.right = new TreeNode(10);
+        t.left.right.left = new TreeNode(12);
+        t.left.right.right = new TreeNode(13);
         t.left.left = new TreeNode(3);
         t.left.left.left = new TreeNode(4);
 

@@ -7,6 +7,8 @@ public class Examples {
         System.out.println(a);
         int b =  1 << 3;
         System.out.println(b);
+        int e = 10 >> 1;
+        System.out.println(e);
 
         int c = 14 ^ 5;
         System.out.println(c);
