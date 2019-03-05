@@ -3,8 +3,6 @@ package MySolutions.DynamicProgramming;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table;
-
 public class Knapsack {
 
     private static class Item {
