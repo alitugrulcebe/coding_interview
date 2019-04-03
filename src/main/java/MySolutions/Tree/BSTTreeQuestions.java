@@ -46,6 +46,15 @@ public class BSTTreeQuestions{
         return root;
     }
 
+    public static BSTTreeQuestions createPrintBinaryTreeMedium() {
+        BSTTreeQuestions bstree = new BSTTreeQuestions();
+        bstree.root = new TreeNode(1);
+        bstree.root.left = new TreeNode(2);
+        bstree.root.right = new TreeNode(5);
+        bstree.root.left.left = new TreeNode(3);
+        bstree.root.left.left.left = new TreeNode(4);
+        return bstree;
+    }
     // SUM of right leaves
     public static BSTTreeQuestions createBinaryTree() {
         BSTTreeQuestions bstree = new BSTTreeQuestions();
@@ -122,6 +131,29 @@ public class BSTTreeQuestions{
         bstree.insertToBST(0);
         bstree.insertToBST(2);
         bstree.insertToBST(1);
+        return bstree;
+    }
+    public static BSTTreeQuestions createTiltTree() {
+        BSTTreeQuestions bstree = new BSTTreeQuestions();
+        bstree.root = new TreeNode(1);
+        bstree.root.left = new TreeNode(2);
+        bstree.root.right = new TreeNode(3);
+        bstree.root.left.left = new TreeNode(4);
+        bstree.root.left.left.left = null;
+        bstree.root.right.left = new TreeNode(5);
+        return bstree;
+    }
+
+
+    public static BSTTreeQuestions createSymmetric() {
+        BSTTreeQuestions bstree = new BSTTreeQuestions();
+        bstree.root = new TreeNode(1);
+        bstree.root.left = new TreeNode(2);
+        bstree.root.right = new TreeNode(2);
+        bstree.root.left.left = new TreeNode(3);
+        bstree.root.left.right = new TreeNode(4);
+        bstree.root.right.left = new TreeNode(4);
+        bstree.root.right.right = new TreeNode(3);
         return bstree;
     }
     public static BSTTreeQuestions createBSTTree(){

@@ -1,7 +1,7 @@
 package MySolutions.Tree;
 
 public class LowestCommonAnchestor {
-    TreeNode lca(TreeNode treeNode, int n1, int n2)
+    public static TreeNode lca(TreeNode treeNode, int n1, int n2)
     {
         if (treeNode == null)
             return null;
@@ -15,5 +15,10 @@ public class LowestCommonAnchestor {
             return lca(treeNode.right, n1, n2);
 
         return treeNode;
+    }
+
+    public static void main(String[] args) {
+        BSTTreeQuestions mirrorTree = BSTTreeQuestions.createMirrorTree();
+        System.out.println(lca(mirrorTree.getRoot(),60,80).val);
     }
 }
