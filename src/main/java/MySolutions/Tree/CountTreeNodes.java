@@ -57,27 +57,12 @@ public class CountTreeNodes {
         return l;
     }
 
-
-    public static TreeNode mirror(TreeNode root) {
-        if(root == null)
-            return root;
-
-        mirror(root.left);
-        mirror(root.right);
-
-        TreeNode tmp  = root.left;
-        root.left = root.right;
-        root.right = tmp;
-        return root;
-    }
-
     public static void main(String[] args) {
         BSTTreeQuestions bstTree = BSTTreeQuestions.createMirrorTree();
-        TreeNode mirror = mirror(bstTree.getRoot());
         bstTree = BSTTreeQuestions.createBSTTree();
-        System.out.println(countNodes(bstTree.getRoot()));
-        //System.out.println(countLeafNodes1(bstTree.getRoot()," "));
-        System.out.println(countEvenNodes1(bstTree.getRoot()));
+        //System.out.println(countNodes(bstTree.getRoot()));
+        System.out.println(countLeafNodes1(bstTree.getRoot()," "));
+        //System.out.println(countEvenNodes1(bstTree.getRoot()));
     }
 
 }

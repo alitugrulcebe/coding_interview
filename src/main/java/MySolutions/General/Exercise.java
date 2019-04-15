@@ -1,5 +1,9 @@
 package MySolutions.General;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Optional;
+
 public class Exercise {
 
     public static long pow(int a, int b) {
@@ -117,6 +121,7 @@ public class Exercise {
     }
 
     public static void main(String[] args) {
+
         char c = 'a';
         int s = (int) (c - '0');
 
@@ -132,6 +137,10 @@ public class Exercise {
 //values = [a,b,c,d,a,d,a,b,c,d,d,d,d,d,a,a,a,a,c,c,a,a,b,b,a,b,b,a,a]
         int[] values = new int[]{1,2,3,4,1,4,1,2,3,4,4,4,4,4,1,1,1,1,1,3,3,1,1,2,2,1,2,2,1,1,};
         int[] values1 = new int[]{1,2,3,1,1,2,3,3,1,1,1,1,1,3,3,1,1,2,2,1,2,2,1,1,2};
+
+        int[] aa = new int[]{1,2,3,4,5};
+        int i = Arrays.binarySearch(aa, 3);
+        System.out.println(i);
         fourWay(values1);
     }
 }

@@ -7,7 +7,7 @@ public class Examples {
         System.out.println(a);
         int b =  1 << 3;
         System.out.println(b);
-        int e = 10 >> 1;
+        int e = 20 >> 1;
         System.out.println(e);
 
         int c = 14 ^ 5;

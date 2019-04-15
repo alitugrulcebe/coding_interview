@@ -1,7 +1,5 @@
 package MySolutions.Tree;
 
-import interview_questions.Tree.BST;
-
 import java.util.*;
 
 public class KDistanceBinaryTree {
