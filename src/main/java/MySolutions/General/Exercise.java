@@ -1,8 +1,9 @@
 package MySolutions.General;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Exercise {
 
@@ -122,25 +123,54 @@ public class Exercise {
 
     public static void main(String[] args) {
 
-        char c = 'a';
-        int s = (int) (c - '0');
+//        char c = 'a';
+//        int s = (int) (c - '0');
+//
+//        int numericValue = (int)c;
+//
+//        System.out.println(s);
+//
+//        pow(7,12);
+//
+//        int [] arr = new int[]{3,4,5,1};
+//        peakIndexInMountainArray(arr);
+//
+////values = [a,b,c,d,a,d,a,b,c,d,d,d,d,d,a,a,a,a,c,c,a,a,b,b,a,b,b,a,a]
+//        int[] values = new int[]{1,2,3,4,1,4,1,2,3,4,4,4,4,4,1,1,1,1,1,3,3,1,1,2,2,1,2,2,1,1,};
+//        int[] values1 = new int[]{1,2,3,1,1,2,3,3,1,1,1,1,1,3,3,1,1,2,2,1,2,2,1,1,2};
+//
+//        int[] aa = new int[]{1,2,3,4,5};
+//        int i = Arrays.binarySearch(aa, 3);
+//        System.out.println(i);
+//        fourWay(values1);
 
-        int numericValue = (int)c;
+        ArrayList<Integer> aab = new ArrayList<>();
+        TreeMap<String,Integer> tm = new TreeMap<>();
+        Comparator<? super String> comparator = tm.comparator();
+        tm.put("a",2);
+        tm.put("z",20);
+        tm.put("t",7);
+        tm.put("c",12);
+        tm.keySet().stream().forEach(System.out::println);
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(1,2);
+        map.put(2,5);
+        map.put(3,5);
+        int v = Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getValue();
+        Stream<Integer> integerStream = map.entrySet().stream().filter((entry1) -> entry1.getValue() == v).map(x -> x.getKey());
+        List<Integer> collect = integerStream.collect(Collectors.toList());
+        //System.out.println(collect);
 
-        System.out.println(s);
+        int[] x = new int[10];
+        List<Integer> list = Arrays.stream(x).boxed().collect(Collectors.toList());
 
-        pow(7,12);
-
-        int [] arr = new int[]{3,4,5,1};
-        peakIndexInMountainArray(arr);
-
-//values = [a,b,c,d,a,d,a,b,c,d,d,d,d,d,a,a,a,a,c,c,a,a,b,b,a,b,b,a,a]
-        int[] values = new int[]{1,2,3,4,1,4,1,2,3,4,4,4,4,4,1,1,1,1,1,3,3,1,1,2,2,1,2,2,1,1,};
-        int[] values1 = new int[]{1,2,3,1,1,2,3,3,1,1,1,1,1,3,3,1,1,2,2,1,2,2,1,1,2};
-
-        int[] aa = new int[]{1,2,3,4,5};
-        int i = Arrays.binarySearch(aa, 3);
-        System.out.println(i);
-        fourWay(values1);
+        int[] xx = new int[4];
+        xx[0] = -1;
+        xx[1] = -2;
+        xx[2] = -4;
+        xx[3] = -5;
+        int[] yy = Arrays.stream(xx).boxed().collect(Collectors.toList()).stream().map((t)->t*t).sorted().mapToInt(j -> j).toArray();
+        String reduce = Arrays.stream(yy).boxed().map(Object::toString).collect(Collectors.joining(","));
+        System.out.println(reduce);
     }
 }

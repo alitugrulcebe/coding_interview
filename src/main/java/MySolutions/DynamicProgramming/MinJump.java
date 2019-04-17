@@ -1,4 +1,4 @@
-package MySolutions.General;
+package MySolutions.DynamicProgramming;
 
 public class MinJump {
 

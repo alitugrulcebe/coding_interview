@@ -1,0 +1,34 @@
+Interview Questions
+
+1. Difference between Thread and Process
+2. Mvn:install and mvn:package difference
+3. Why use Jenkins
+4. MongoDB- if its in your resume - find an employee document in a collection
+5. thread creation Java
+6. Different types of joins and examples
+7. Gave a sample code in online editor and asked to check if the given number is pow of 10. edge cases, boundary values for testing
+8. Virtual in java
+9. SQL to query first 3 rows from DB.
+10. Unix Grep and is grep case sensitive?
+11. unix get first 10 lines or last 10 lines of file
+12. How to prevent livelocks in java threading
+13. I was asked to design an alerting framework for a trading system.
+14. print all the characters that needs to be present to make a sentence an pangram
+15. If you were to design Amazon's algorithm for "suggestions" how would you do it and what things would you take into consideration?
+16. Write a program to check whether given tree is binary search tree
+17. In a linked list, find nth element from the end
+18. System design question to design alert processing system
+19. Implement cache where each element in cache have its own expiry time.
+20. Given an array of non negative integers, find the smallest sub array that at least equals a value x that is also passed to the function.
+21. Coderpad: given an array scores[][] = {“jerry”,”65”},{“bob”,”91”}, {“jerry”,”23”}, {“Eric”,”83”}} Find the student with highest average score
+22. given a string, find all Unique substrings with k length, then sort. ex: caaab，k = 2，return aa, ab, ca
+23. What is the concurrent mark-sweep alogirthm for garbage collection?
+24. Revert a linked list with a cycle in it. (Thus removing the cycle)
+25. How DB indexing works.
+26. Design a system to manage a parking lot.
+27. A robot can move in 4 directions. 'U' - UP, 'D' - DOWN, 'L'- LEFT, 'R'-RIGHT. Ignore all teh other. The position of the robot can be identified by array[x][y]. Please completed the method which returns the final position of the robot.
+    private static Integer[][] findIndex(String testCase){
+    return new Integer[0][0];
+    }
+    Here the testcase contains the characters like 'ULLLDDUU STRULR';
+28. A child climbing stairs which has N number of Steps. To add fun to it child can climb 1 or 2 or 3 at a time. Find the number of ways the child can climb the N number of steps?

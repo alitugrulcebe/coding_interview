@@ -5,7 +5,7 @@ import java.util.*;
 public class UdemyAlgo{
 
     public static void main(String[] args) {
-        BString(0,3,new int[]{1,2,3});
+        BString(0,3,new int[]{1,2,3}," ");
     }
 
     //MySolutions.Recursion Problems Solution:
@@ -139,20 +139,21 @@ public class UdemyAlgo{
     }
 
     //Binary Strings
-    public static void BString(int i, int n, int[] Array){
+    public static void BString(int i, int n, int[] Array,String indent){
         if(i == n){
             for(int l: Array)
-                System.out.print(l + " ");
-            System.out.println("Base case geldi");
+                System.out.print(indent + l + " ");
+            System.out.println();
+            //System.out.println("Base case geldi");
             return;
         }
-        System.out.println("Rec oncesi"  + i);
+        System.out.println(indent + "Calling First i: " + i);
         Array[i] = 0;
-        BString(i + 1, n, Array);
+        BString(i + 1, n, Array,indent+"  ");
         //Backtracking
-        System.out.println("Rec sonrais " + i);
+        System.out.println(indent + "Calling Second i: " + i);
         Array[i] = 1;
-        BString(i + 1, n, Array);
+        BString(i + 1, n, Array,indent + "  ");
 
     }
 

@@ -1,4 +1,4 @@
-package MySolutions.General;
+package MySolutions.Recursion;
 
 import java.util.Arrays;
 

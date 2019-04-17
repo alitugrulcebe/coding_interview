@@ -1,4 +1,4 @@
-package MySolutions.General;
+package MySolutions.String;
 
 import java.util.*;
 

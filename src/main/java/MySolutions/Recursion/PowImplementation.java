@@ -1,4 +1,4 @@
-package MySolutions.General;
+package MySolutions.Recursion;
 
 public class PowImplementation {
     public static double myPow(double x, int n) {

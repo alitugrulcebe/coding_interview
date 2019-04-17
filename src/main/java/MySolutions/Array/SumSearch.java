@@ -1,4 +1,4 @@
-package MySolutions.General;
+package MySolutions.Array;
 
 import java.util.HashSet;
 
