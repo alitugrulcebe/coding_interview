@@ -375,7 +375,6 @@ public class BST {
 			int subSum = sum - node.getData();
 			return hasPathSum(node.getLeft(),subSum) || hasPathSum(node.getRight(),subSum);
 		}
-	
 	}
 	
 	public void printPaths(){//prints out all of BST's root-to-leaf paths, one per line.

@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ConstructFromInorderPostOrder {
+public class _ConstructFromInorderPostOrder {
     /*public static TreeNode buildTree(int[] inorder, int[] postorder) {
         if(postorder.length == 0 || inorder.length ==0)
             return null;

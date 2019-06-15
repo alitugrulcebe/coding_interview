@@ -1,4 +1,4 @@
-package MySolutions.Maze;
+package MySolutions.LeetCodeAmazonExplore.CodingInterview;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

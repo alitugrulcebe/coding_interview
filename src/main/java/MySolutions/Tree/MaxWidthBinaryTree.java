@@ -38,7 +38,7 @@ public class MaxWidthBinaryTree {
         t.right = new TreeNode(5);
         t.right.right = new TreeNode(7);
         t.right.right.left = new TreeNode(8);
-
+        PrintableTreeNode.print(t);
         System.out.println(widthOfBinaryTree(t));
     }
 }

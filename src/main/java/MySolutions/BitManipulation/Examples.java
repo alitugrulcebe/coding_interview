@@ -14,5 +14,10 @@ public class Examples {
         System.out.println(c);
         int d = 14 | 5;
         System.out.println(d);
+
+        int i = 5;
+        int j = 7;
+        int x = i & j;
+        System.out.println(x);
     }
 }

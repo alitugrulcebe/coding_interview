@@ -1,9 +1,11 @@
 package MySolutions.Tree;
 
+import MySolutions.Tree.TreeNode;
+
 import java.util.Stack;
 
-public class InorderWithoutRecursive {
-    void inorder(TreeNode root)
+public class _InOrderIterative {
+    static void  inorder(TreeNode root)
     {
         Stack<TreeNode> s = new Stack<TreeNode>();
         TreeNode curr = root;
@@ -33,5 +35,15 @@ public class InorderWithoutRecursive {
                subtree's turn */
             curr = curr.right;
         }
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(7);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(9);
+        root.left.left = new TreeNode(3);
+        root.left.left.left = new TreeNode(2);
+        root.left.left.right = new TreeNode(4);
+        inorder(root);
     }
 }

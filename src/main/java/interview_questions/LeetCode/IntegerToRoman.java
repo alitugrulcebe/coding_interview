@@ -14,7 +14,7 @@ package interview_questions.LeetCode;
 	http://en.wikipedia.org/wiki/Roman_numerals
  */
 public class IntegerToRoman {
-    public String intToRoman(int num) {
+    public static String intToRoman(int num) {
         // Start typing your Java solution below
         // DO NOT write main() function
     	
@@ -47,6 +47,7 @@ public class IntegerToRoman {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+        System.out.println(intToRoman(4));
 
 	}
 

@@ -2,7 +2,7 @@ package MySolutions.Tree;
 
 import java.util.Stack;
 
-public class PostOrderIterative {
+public class _PostOrderIterative {
     public static void postOrderStack(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>() ;
         Stack<Integer> values = new Stack<>();
