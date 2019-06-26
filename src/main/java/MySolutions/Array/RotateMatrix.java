@@ -1,7 +1,7 @@
 /**
  * 
  */
-package interview_questions.Pocket.Array;
+package MySolutions.Array;
 
 
 

@@ -23,12 +23,12 @@ public class RomanToInteger {
             if(map.get(s.charAt(i)) >= map.get(s.charAt(i+1)))
                 result += map.get(s.charAt(i));
             else
-                result -= map.get(s.charAt(i+1));
+                result -= map.get(s.charAt(i));
         }
         return result;
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("LVIII"));
+        System.out.println(romanToInt("LIVIII"));
     }
 }

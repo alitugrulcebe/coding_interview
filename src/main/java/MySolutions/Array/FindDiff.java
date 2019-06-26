@@ -1,7 +1,7 @@
 /**
  * 
  */
-package interview_questions.Pocket.Array;
+package MySolutions.Array;
 import java.util.*;
 /**
  * Created by Wenqi Zhu

@@ -27,5 +27,6 @@ public class PermuteAllStringWithSwap {
   public static void main(String[] args) {
     ArrayList<String> result = new ArrayList<>();
     ArrayList<String> abc = permute("ABC", 0, 3, result);
+    System.out.println(result);
   }
 }

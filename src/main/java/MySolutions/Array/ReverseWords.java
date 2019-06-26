@@ -1,7 +1,7 @@
 /**
  * 
  */
-package interview_questions.Array;
+package MySolutions.Array;
 
 /**
  * Created by Wenqi Zhu
