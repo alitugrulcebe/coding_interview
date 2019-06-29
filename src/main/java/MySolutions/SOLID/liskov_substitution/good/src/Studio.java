@@ -4,8 +4,8 @@ package MySolutions.SOLID.liskov_substitution.good.src;
  * Created by mrk on 4/8/14.
  */
 public class Studio {
-    int squareFootage;
-    int numberOfRooms;
+    public int squareFootage;
+    public int numberOfRooms;
 
     public Studio() {
         this.numberOfRooms = 0;

@@ -1,5 +1,6 @@
 package MySolutions.SOLID.open_closed.bad.spec;
 
+import MySolutions.SOLID.open_closed.bad.src.Greeter;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,5 +1,7 @@
 package MySolutions.SOLID.open_closed.good.spec;
 
+import MySolutions.SOLID.open_closed.good.src.Greeter;
+import MySolutions.SOLID.open_closed.good.src.Personality;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

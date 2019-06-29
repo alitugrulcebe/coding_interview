@@ -1,5 +1,6 @@
 package MySolutions.SOLID.dependency_inversion.bad.spec;
 
+import MySolutions.SOLID.dependency_inversion.bad.src.Emailer;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

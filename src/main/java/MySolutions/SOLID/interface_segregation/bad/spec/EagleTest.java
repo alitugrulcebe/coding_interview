@@ -1,5 +1,6 @@
 package MySolutions.SOLID.interface_segregation.bad.spec;
 
+import MySolutions.SOLID.interface_segregation.bad.src.Eagle;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,5 +1,7 @@
 package MySolutions.SOLID.single_responsibility.good.spec;
 
+import MySolutions.SOLID.single_responsibility.good.src.Board;
+import MySolutions.SOLID.single_responsibility.good.src.BoardPresenter;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

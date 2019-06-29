@@ -1,5 +1,7 @@
 package MySolutions.SOLID.liskov_substitution.good.spec;
 
+import MySolutions.SOLID.liskov_substitution.good.src.BedroomAdder;
+import MySolutions.SOLID.liskov_substitution.good.src.PenthouseSuite;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

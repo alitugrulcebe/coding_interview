@@ -1,5 +1,6 @@
 package MySolutions.SOLID.interface_segregation.bad.spec;
 
+import MySolutions.SOLID.interface_segregation.bad.src.Penguin;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;

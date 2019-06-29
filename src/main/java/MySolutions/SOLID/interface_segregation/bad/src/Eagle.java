@@ -4,8 +4,8 @@ package MySolutions.SOLID.interface_segregation.bad.src;
  * Created by mrk on 4/7/14.
  */
 public class Eagle implements Bird {
-    String currentLocation;
-    int numberOfFeathers;
+    public String currentLocation;
+    public int numberOfFeathers;
 
     public Eagle(int initialFeatherCount) {
         this.numberOfFeathers = initialFeatherCount;

@@ -1,5 +1,6 @@
 package MySolutions.SOLID.single_responsibility.good.spec;
 
+import MySolutions.SOLID.single_responsibility.good.src.Board;
 import org.junit.Test;
 
 import java.util.ArrayList;

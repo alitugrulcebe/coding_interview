@@ -4,8 +4,8 @@ package MySolutions.SOLID.liskov_substitution.good.src;
  * Created by mrk on 4/8/14.
  */
 public class PenthouseSuite {
-    int squareFootage;
-    int numberOfBedrooms;
+    public int squareFootage;
+    public int numberOfBedrooms;
 
     public PenthouseSuite() {
         this.numberOfBedrooms = 4;

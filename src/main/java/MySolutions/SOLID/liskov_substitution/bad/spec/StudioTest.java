@@ -1,5 +1,6 @@
 package MySolutions.SOLID.liskov_substitution.bad.spec;
 
+import MySolutions.SOLID.liskov_substitution.bad.src.Studio;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

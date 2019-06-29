@@ -1,5 +1,8 @@
 package MySolutions.SOLID.dependency_inversion.good.spec;
 
+
+import MySolutions.SOLID.dependency_inversion.good.src.Notifier;
+import MySolutions.SOLID.dependency_inversion.good.src.WeatherTracker;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

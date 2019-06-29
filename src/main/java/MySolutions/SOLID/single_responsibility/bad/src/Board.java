@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by mrk on 4/7/14.
  */
 public class Board {
-    ArrayList<String> spots;
+    public ArrayList<String> spots;
 
     public Board() {
         this.spots = new ArrayList<String>();

@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * Created by mrk on 4/7/14.
  */
 public class Board {
-    int size;
-    ArrayList<String> spots;
+    public int size;
+    public ArrayList<String> spots;
 
     public Board(int size) {
         this.size = size;

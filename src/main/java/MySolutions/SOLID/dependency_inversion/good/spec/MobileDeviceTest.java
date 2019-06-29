@@ -1,5 +1,6 @@
 package MySolutions.SOLID.dependency_inversion.good.spec;
 
+import MySolutions.SOLID.dependency_inversion.good.src.MobileDevice;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
