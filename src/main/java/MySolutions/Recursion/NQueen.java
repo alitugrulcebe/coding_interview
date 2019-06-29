@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class NQueen {
     // N x N chessboard
-    public static final int N = 8;
+    public static final int N = 4;
 
     // Function to check if two queens threaten each other or not
     private static boolean isSafe(char mat[][], int r, int c)

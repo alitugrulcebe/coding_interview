@@ -2,6 +2,31 @@ package MySolutions.Recursion;
 
 public class Permutation {
 
+    public static void permute(String s, String t) {
+        if(s.isEmpty())
+            System.out.println(t);
+
+        for(int i=0;i<s.length();i++) {
+            t += s.charAt(i);
+            String newS = new StringBuilder(s).deleteCharAt(i).toString();
+            permute(newS,t);
+            t = t.substring(0,t.length()-1);
+        }
+    }
+
+    public static void recPermute(String soFar, String remaining) {
+        //base case
+        if (remaining.length() == 0)
+            System.out.println(soFar);
+        else {
+            for (int i=0; i< remaining.length(); i++) {
+                String nextSoFar = soFar + remaining.charAt(i);
+                String nextRemaining = remaining.substring(0,i) + remaining.substring(i+1);
+                recPermute(nextSoFar, nextRemaining);
+            }
+        }
+    }
+
     // print n! permutation of the characters of the string s (in order)
     public  static void perm1(String s) {
         perm1("", s);
@@ -54,8 +79,10 @@ public class Permutation {
         int n = 3;
         String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String elements = alphabet.substring(0, n);
-        perm1(elements);
+        //perm1(elements);
         System.out.println();
-        perm2(elements);
+        //perm2(elements);
+        //permute("ABC","");
+        recPermute("","ABC");
     }
 }

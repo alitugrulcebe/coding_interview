@@ -1,6 +1,7 @@
 package MySolutions.LeetCodeGoogleExplore;
 
 public class ContainerWithMostWater {
+
     public int maxArea(int[] height) {
         int maxArea = 0;
         if(height == null || height.length == 1) return maxArea;

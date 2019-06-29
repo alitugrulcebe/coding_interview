@@ -36,7 +36,7 @@ public class PascalTriangle {
   }
 
   public static void main(String[] args) {
-    List<List<Integer>> generate = generate(3);
+    List<List<Integer>> generate = generate(5);
     generate.stream().forEach(System.out::println);
   }
 }

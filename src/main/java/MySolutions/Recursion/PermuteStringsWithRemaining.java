@@ -7,8 +7,9 @@ public class PermuteStringsWithRemaining {
             System.out.println(sofar);
         } else {
             for (int i=0;i<rest.length();i++) {
-                String remaining = rest.substring(0,i) + rest.substring(i+1);
-                permute(sofar + rest.toCharArray()[i],remaining,indent+indent);
+                String newRest = rest.substring(0,i) + rest.substring(i+1);
+                System.out.println(indent + "newRest : " + newRest + " Rest :" + rest);
+                permute(sofar + rest.charAt(i),newRest,indent+indent);
             }
         }
     }
