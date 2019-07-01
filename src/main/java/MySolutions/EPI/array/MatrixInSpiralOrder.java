@@ -1,0 +1,37 @@
+package MySolutions.EPI.array;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MatrixInSpiralOrder {
+
+    public static List<Integer> matrixInSpiralOrder(List<List<Integer>> squareMatrix){
+        List<Integer> spiralOrdering = new ArrayList<>();
+        for (int offset = 0; offset < Math.ceil(0.5) * squareMatrix.size(); offset++) {
+            matrixLayerInClockWise(squareMatrix,offset,spiralOrdering);
+        }
+        return spiralOrdering;
+    }
+
+    private static void matrixLayerInClockWise(List<List<Integer>> squareMatrix, int offset, List<Integer> spiralOrdering) {
+        if(offset == squareMatrix.size()) {
+            spiralOrdering.add(squareMatrix.get(offset).get(offset));
+        }
+
+        for (int j = offset; j < squareMatrix.size() - offset - 1; j++) {
+            spiralOrdering.add(squareMatrix.get(offset).get(j));
+        }
+
+        for (int i = offset; i < squareMatrix.size() - offset - 1; i++) {
+            spiralOrdering.add(squareMatrix.get(i).get(squareMatrix.size()-offset-1));
+        }
+
+        for (int j = squareMatrix.size() - offset -1; j > offset; --j) {
+            spiralOrdering.add(squareMatrix.get(squareMatrix.size()-offset-1).get(j));
+        }
+
+        for (int i = squareMatrix.size() - offset -1; i > offset; --i) {
+            spiralOrdering.add(squareMatrix.get(i).get(offset));
+        }
+    }
+}

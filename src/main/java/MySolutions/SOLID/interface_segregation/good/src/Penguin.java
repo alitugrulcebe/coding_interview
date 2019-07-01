@@ -4,8 +4,8 @@ package MySolutions.SOLID.interface_segregation.good.src;
  * Created by mrk on 4/7/14.
  */
 public class Penguin implements SwimmingCreature, FeatheredCreature {
-    String currentLocation;
-    int numberOfFeathers;
+    public String currentLocation;
+    public int numberOfFeathers;
 
     public Penguin(int initialFeatherCount) {
         this.numberOfFeathers = initialFeatherCount;
